@@ -27,5 +27,5 @@ if (app.config.ssl) {
 }
 
 server.listen(port, addr, () => {
-  console.log(`running in ${process.env.ESALE_ENV} mode, on ${addr}:${port}`);
+  console.log(`running in ${process.env.NODE_ENV} mode, on ${addr}:${port}`);
 });

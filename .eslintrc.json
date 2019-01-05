@@ -1,0 +1,23 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "semi": 2,
+    "prefer-destructuring": [0],
+    "max-len": ["error", {"code": 160, "tabWidth": 2}]
+  },
+  "globals": {
+    "HttpStatus": true,
+    "Joi": true,
+    "joiAssert": true,
+    "describe": true,
+    "it": true,
+    "app": true,
+    "chai": true,
+    "supertest": true,
+    "request": true,
+    "expect": true,
+    "td": true,
+    "before": true,
+    "after": true
+  }
+}

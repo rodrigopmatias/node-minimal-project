@@ -1,0 +1,41 @@
+image: node:10-alpine
+
+cache:
+  paths:
+    - node_modules
+    - db.test.sqlite
+
+stages:
+  - install
+  - lint
+  - database
+  - unit
+  - integration
+  - contract
+
+install:
+  stage: install
+  script: yarn install
+
+lint:
+  stage: lint
+  script: npm run lint
+
+create database:
+  stage: database
+  script: npm run test:db:migrate
+
+test of integration:
+  stage: integration
+  environment:
+  script: npm run test:integration
+
+test of unit:
+  stage: unit
+  environment:
+  script: npm run test:unit
+
+test of contract:
+  stage: contract
+  environment:
+  script: npm run test:contract

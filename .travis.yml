@@ -8,6 +8,6 @@ cache: yarn
 install:
   - yarn install
 before_script:
-  - npm db:migrate
+  - npm run db:migrate
 script:
-  - npm test
+  - npm run test

@@ -4,7 +4,8 @@
   "description": "Minimal web project for nodejs with Express and Sequelize",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=prod babel-node index.js",
+    "start": "babel-node index.js",
+    "start:prod": "NODE_ENV=prod babel-node index.js",
     "start:dev": "NODE_ENV=dev nodemon --exec babel-node index.js",
     "lint": "eslint '**/*.js'",
     "lint:fix": "eslint '**/*.js' --fix",

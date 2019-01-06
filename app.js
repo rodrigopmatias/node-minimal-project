@@ -3,6 +3,7 @@ import bodyParser from 'body-parser';
 import morgan from 'morgan';
 
 import configure from './config';
+import database from './models';
 
 const buildApplication = (dependencies) => {
   const app = express();
@@ -18,6 +19,9 @@ const buildApplication = (dependencies) => {
   return app;
 };
 
-const app = buildApplication([configure]);
+const app = buildApplication([
+  configure,
+  database,
+]);
 
 export default app;

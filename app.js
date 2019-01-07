@@ -4,6 +4,7 @@ import morgan from 'morgan';
 
 import configure from './config';
 import database from './models';
+import routerConfigure from './routes';
 
 const buildApplication = (dependencies) => {
   const app = express();
@@ -20,8 +21,7 @@ const buildApplication = (dependencies) => {
 };
 
 const app = buildApplication([
-  configure,
-  database,
+  configure, database, routerConfigure,
 ]);
 
 export default app;
